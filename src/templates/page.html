@@ -1,0 +1,47 @@
+---
+title: Index page
+sections: [{
+  img: '1.jpg',
+  title: Slider 1,
+},{
+  img: '2.jpg',
+  title: Slider 2,
+},{
+  img: '3.jpg',
+  title: Slider 3,
+},{
+  img: '4.jpg',
+  title: Slider 4,
+},{
+  img: '5.jpg',
+  title: Slider 5,
+}]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  <div class="main-scroller">
+    {% for section in sections %}
+      <div class="section" style="background-image: url(img/{{section.img}})">
+        
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="nav">
+    <div class="nav__1">
+      <ul>
+        {% for section in sections %}
+          <li>{{section.title}}</li>
+        {% endfor %}
+      </ul>  
+    </div>
+     <div class="nav__2">
+      <ul>
+        {% for section in sections %}
+          <li>{{section.title}}</li>
+        {% endfor %}
+      </ul>  
+    </div>
+  </div>
+{% endblock %}
